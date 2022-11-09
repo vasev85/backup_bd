@@ -31,8 +31,7 @@
 
 2.1 С помощью официальной документации приведите пример команды резервирования данных и восстановления БД (pgdump/pgrestore).
 
-pg_dump -Uvase -Fc vase > vase.dump
-
+pg_dump -Uvase -Fc vase > vase.dump  
 dropdb -Uvase vase
 
 pg_restore -Uvase -C -d postgres  vase.dump
