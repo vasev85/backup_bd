@@ -34,7 +34,10 @@
 pg_dump -Uvase -Fc vase > vase.dump  
 dropdb -Uvase vase
 
-pg_restore -Uvase -C -d postgres  vase.dump
+pg_restore -Uvase -C -d postgres  vase.dump  
+для сжатия добавляем тип -Ft  
+pg_dump -Uvase -Ft vase > zip_vase.dump  
+pg_restore -Uvase -C -Ft -d postgres  zip_vase.dump  
 
 
 2.1* Возможно ли автоматизировать этот процесс? Если да, то как? 
